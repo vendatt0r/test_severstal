@@ -21,8 +21,6 @@ services:
   web:
     build: .
     container_name: django_tasks_api
-    volumes:
-      - .:/app
     ports:
       - "8000:8000"
     env_file:
