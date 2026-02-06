@@ -20,6 +20,8 @@
 # Решение
 Я выбрал для создания простой REST API для управления задачами на Django REST Framework с PostgreSQL, Docker и Swagger-документацией.
 
+В рамках задания функциональность реализована для одной сущности (Task), так как для остальных сущностей архитектура и подход будут примерно аналогичными.
+
 ## Стек
 - Python 3.11
 - Django + Django REST Framework
@@ -53,10 +55,19 @@ API: http://localhost:8000/api/tasks/
 Swagger: http://localhost:8000/api/docs/
 
 # Запуск
+
+Необходимо склонировать репозиторий и выполнить команду:
 ```docker-compose up --build```
 
 При запуске автоматически:
 - поднимается PostgreSQL
 - применяются миграции
 - стартует Django-сервер
+
+## Тесты
+
+Пример API-тестов реализован с использованием Django REST Framework APITestCase.
+Запуск тестов:
+
+```docker-compose exec web python manage.py test```
 
